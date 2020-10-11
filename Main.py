@@ -2,13 +2,10 @@ from subprocess import Popen
 from tkinter import *
 import os
 
-print("Program Started")
-#path = r"C:\Users\User\Desktop\Files" # path of folder with files to convert for test
-
 root = Tk()
 
 root.title(u'Convert_app')
-root.geometry('500x400+700+300')# ширина=300, высота=150, x=300, y=200
+root.geometry('500x400+700+300')
 root.iconname("Convert_App")
 
 label = Label(root, text="Folder Path", height=1, width=20)
@@ -41,7 +38,7 @@ def main(event):
     if counter != 0 and os.path.exists("Ready_Vidios"):
         counter = counter
         path = getnameoffolder()
-        file_list = os.listdir(r"{}".format(path[:-1]))  # список файлов и папок в директории, где запущена программа
+        file_list = os.listdir(r"{}".format(path[:-1]))  
         for f in file_list:
             counter += 1
             convertfunc(os.path.join(r"{}".format(path[:-1]), f), counter)
@@ -49,14 +46,13 @@ def main(event):
     else:
         create_new_folder()
         path = getnameoffolder()
-        file_list = os.listdir(r"{}".format(path[:-1]))  # список файлов и папок в директории, где запущена программа
+        file_list = os.listdir(r"{}".format(path[:-1]))  
         for f in file_list:
             counter += 1
             convertfunc(os.path.join(r"{}".format(path[:-1]), f), counter)
             print("Successfully Converted")
 
-conv_button.bind("<Button-1>", main) #при нажатии ЛКМ на кнопку вызывается функция main
-
+conv_button.bind("<Button-1>", main) 
 label.pack(side=TOP, pady=10)
 folder_path.pack(side=TOP, padx=5, pady=50)
 conv_button.pack(padx=3, pady=30)
