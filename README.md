@@ -1,8 +1,19 @@
 # ConvertApp
-This app would help you to automaticly convert -mov video files to mp4 format.
+Video convertation app was created with python using [python-eel](https://github.com/python-eel/Eel). It allows you to convert all -mov files
+from parrent folder to -mp4 files into new child folder.
 
-Download "ConvertApp.exe" and open it.
+![](./web/PhotoFroGit.png)
 
-Than write down your folder with files to convert path and press the "Convert button".
+## About app:
+* Conversion functionality was made using microsoft cross platform [ffmpeg](https://ffmpeg.org/) library.
+*  Web interface was made by simple HTML, CSS and JavaScript.
 
-After a time you will have "Ready_Videos" folder where all files in -mp4 format.
+# Versions:
+## V1 - present:
+* Convert logic writen using python
+* Web - HTML, CSS, JavaScript
+
+## V2 - in production:
+* Convert logic will be rewroten using [react-ffmpeg](https://www.npmjs.com/package/react-ffmpeg) library
+* Web - will be rewriten to JavaScript using React
+* New optional functionality will be added
